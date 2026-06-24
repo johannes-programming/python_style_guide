@@ -57,7 +57,8 @@ The order of the members of a module should be as follows:
 All the module level functions might also be put before all the module level classes if that avoids technical challenges.
 
 Whenever the other rules of this style guide, established convention, and technical convenience all allow for more than one possible ordering of something,
-the more alphabetical ordering (case-insensitive) is to be prefered.
+the more alphabetical ordering of the lower case is prefered.
+This order can be illustrated as ``list[str].sort(key=lambda x: (x.lower(), x))``.
 
 This preference applies to ...
 
@@ -68,6 +69,7 @@ This preference applies to ...
 - keyword parameters of functions,
 - type annotations at the beginning of functions,
 - data within datafiles,
+- all other files inside of a python project, including the manifest,
 - and everything else.
 
 The preference for alphabetical ordering extends even to datafiles.
