@@ -45,7 +45,7 @@ Ordering
 The order of the members of a module should be as follows:
 
 - docstring
-- ``__future__`` imports
+- ``__future__`` imports (if existing)
 - all module level dunder members (at minimum ``__all__``)
 - all top level standard library imports (if any present)
 - all top level third party imports (if any present)
