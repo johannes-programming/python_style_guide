@@ -72,8 +72,6 @@ This preference applies to ...
 - all other files inside of a python project, including the manifest,
 - and everything else.
 
-The preference for alphabetical ordering extends even to datafiles.
-
 Documentation
 -------------
 
