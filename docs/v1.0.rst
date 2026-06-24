@@ -1,0 +1,120 @@
+Formatting
+----------
+
+Each line must contain fewer than 80 characters.
+
+Use four spaces for each indentation level; tabs are forbidden.
+
+Code must never exceed five levels of indentation at any point.
+
+A statement or command must not begin deeper than four indentation levels.
+
+The fifth level may be used only for continuation lines, such as wrapped expressions, function arguments, or comprehensions.
+
+Deferring to helper functions, helper methods, and similar constructs is a good way to maintain indentation limits.
+
+Typing
+------
+
+The entire codebase must be strictly typed.
+
+All functions, methods, variables, and attributes must have explicit type annotations.
+
+Even ``self`` (in methods) and ``cls`` (in classmethods) must be explicitly annotated as ``Self`` and ``type[Self]``.
+
+All local variables within a function or method must be declared with type annotations at the beginning of the scope, without assignment. 
+Assignment must occur separately at the point of first use.
+
+Prefer importing types from ``collections.abc`` over importing from ``typing``.
+
+Docstrings
+----------
+
+Everything that can have a docstring should have a docstring.
+
+Prefer one line docstrings over multi-line docstrings.
+
+Every docstring should be in the imperative mood.
+
+Where possible docstrings can be set with `setdoc <https://pypi.org/project/setdoc/>`_.
+
+Ordering
+--------
+
+The order of the members of a module should be as follows:
+
+- docstring
+- ``__future__`` imports
+- all module level dunder members (at minimum ``__all__``)
+- all top level imports other than ``__future__`` (if any present)
+- all other module level variables/constants (if any present)
+- all module level classes (if any present)
+- all module level functions (if any present)
+- the call to one function under a ``if __name__ == "__main__":`` guard (if present)
+
+All the module level functions might also be put before all the module level classes if that avoids technical challenges.
+
+Whenever the other rules of this style guide, established convention, and technical convenience all allow for more than one possible ordering of something,
+the more alphabetical ordering (case-insensitive) is to be prefered.
+
+This preference applies to ...
+
+- the items of ``__all__``,
+- imports,
+- module members,
+- callables inside of classes,
+- keyword parameters of functions,
+- type annotations at the beginning of functions,
+- data within datafiles,
+- and everything else.
+
+The preference for alphabetical ordering extends even to datafiles.
+
+Documentation
+-------------
+
+``__all__`` must explicitly list every symbol intended to be part of the module's public interface.
+``__all__`` may be empty but must always exist.
+Everything in ``__all__`` must be in the documentation. 
+Everything in the documentation must be in ``__all__``.
+If the ``__all__`` of multiple python files reference the same feauture,
+i.e. the feauture can be imported from more than one module,
+then the documentation might mention it still only once.
+
+Interfaces
+----------
+
+The CLI entry, if existing, should be called ``main``. It should at least support ``main(args: Optional[Iterable[str]] = None, /) -> None``.
+
+The parser  ...
+
+- should provide at least ``-h``, ``--help``, and ``--version``,
+- should permit unique abbreviations of long options,
+- should permit clustering short options,
+- should not use long options with just one dash (e.g. ``-foo``),
+- should not use any options with an arity greater than ``1``,
+- but can use repeatable options.
+
+If there is ``main``, then there should always be an equivalent API entry ``run``.
+
+The signature of run should imitate the parser of ``main`` within reason.
+Everything that can be done with ``main`` (except printing the help or the version)
+should also be possible with calling ``run``, and vice-versa.
+
+For example: If ``main("--verbose --bar=hello --foo=monty --bar=world spam 42".split())`` conforms to the parser within ``main``,
+then ``run("spam", 42, bar=["hello", "world"], foo="monty", verbose=True)`` could be the equivalent.
+
+Bending the rules
+-----------------
+
+The rules of this style guide may be broken only when no alternative exists.
+
+In such cases, a comment must reference the violated rule in paraphrased form, for example:
+
+.. code-block:: python
+
+    # The style guide advises against exceeding five indentation levels.
+    # In this case, however, compliance is impossible because
+    # [here explanation]
+
+The explanation should contain approximately 25 words describing why the violation was necessary.
