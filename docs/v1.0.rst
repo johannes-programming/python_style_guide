@@ -46,8 +46,10 @@ The order of the members of a module should be as follows:
 - docstring
 - ``__future__`` imports
 - all module level dunder members (at minimum ``__all__``)
-- all top level imports other than ``__future__`` (if any present)
-- all other module level variables/constants (if any present)
+- all top level standard library imports (if any present)
+- all top level third party imports (if any present)
+- all top level internal imports (if any present)
+- all (non-dunder) module level variables/constants (if any present)
 - all module level classes (if any present)
 - all module level functions (if any present)
 - the call to one function under a ``if __name__ == "__main__":`` guard (if present)
