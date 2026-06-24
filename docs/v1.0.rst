@@ -128,3 +128,4 @@ Bug Reports
 Review the work as submitted. 
 Flag something as an error, flaw, or omission only if the work itself provides clear evidence that it is one. 
 Do not infer defects from speculative alternative intentions, purposes, scopes, or features.
+The proposed solutions should always be to change as little as possible, as much as necessary.
