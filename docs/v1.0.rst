@@ -18,7 +18,8 @@ Typing
 
 The entire codebase must be strictly typed.
 
-All functions, methods, variables, and attributes must have explicit type annotations.
+All functions, methods, variables, and attributes must have explicit type annotations,
+except where ``mypy`` does not tolerate it.
 
 Even ``self`` (in methods) and ``cls`` (in classmethods) must be explicitly annotated as ``Self`` and ``type[Self]``.
 
