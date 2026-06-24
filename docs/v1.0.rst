@@ -121,3 +121,10 @@ In such cases, a comment must reference the violated rule in paraphrased form, f
     # [here explanation]
 
 The explanation should contain approximately 25 words describing why the violation was necessary.
+
+Bug Reports
+-----------
+
+Review the work as submitted. 
+Flag something as an error, flaw, or omission only if the work itself provides clear evidence that it is one. 
+Do not infer defects from speculative alternative intentions, purposes, scopes, or features.
