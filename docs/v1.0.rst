@@ -9,7 +9,11 @@ Code must never exceed five levels of indentation at any point.
 
 A statement or command must not begin deeper than four indentation levels.
 
-The fifth level may be used only for continuation lines, such as wrapped expressions, function arguments, or comprehensions.
+Continuation lines, such as wrapped expressions, function arguments, or comprehensions,
+must only use one further level of indentation relative to the beginning of the command.
+
+When taking continuation lines into account, 
+it follows that the code must never exceed five levels of indentation at any point.
 
 Deferring to helper functions, helper methods, and similar constructs is a good way to maintain indentation limits.
 
@@ -57,13 +61,15 @@ The order of the members of a module should be as follows:
 
 All the module level functions might also be put before all the module level classes if that avoids technical challenges.
 
+The individual imports within each of the top level import blocks (standard library imports, third party imports, and internal imports) should be sorted in accordance with ``isort``.
+The ``isort`` order also applies to potential blocks of imports 
+
 Whenever the other rules of this style guide, established convention, and technical convenience all allow for more than one possible ordering of something,
 the more alphabetical ordering is prefered.
 
 This preference applies to ...
 
 - the items of ``__all__``,
-- imports,
 - module members,
 - callables inside of classes,
 - keyword parameters of functions,
