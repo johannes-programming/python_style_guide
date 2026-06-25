@@ -89,6 +89,8 @@ If the ``__all__`` of multiple python files reference the same feauture,
 i.e. the feauture can be imported from more than one module,
 then the documentation might mention it still only once.
 
+Tests should limit themselves to these public features.
+
 Interfaces
 ----------
 
