@@ -112,6 +112,12 @@ should also be possible with calling ``run``, and vice-versa.
 For example: If ``main("--verbose --bar=hello --foo=monty --bar=world spam 42".split())`` conforms to the parser within ``main``,
 then ``run("spam", 42, bar=["hello", "world"], foo="monty", verbose=True)`` could be the equivalent.
 
+Temporary files
+---------------
+
+Temporary files should not be created as such. 
+Instead, create a temporary directory and create temporary files directly or nestedly therein.
+
 Bending the rules
 -----------------
 
