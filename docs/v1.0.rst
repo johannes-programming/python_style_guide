@@ -58,8 +58,7 @@ The order of the members of a module should be as follows:
 All the module level functions might also be put before all the module level classes if that avoids technical challenges.
 
 Whenever the other rules of this style guide, established convention, and technical convenience all allow for more than one possible ordering of something,
-the more alphabetical ordering of the lower case is prefered.
-This order can be illustrated as ``list[str].sort(key=lambda x: (x.lower(), x))``.
+the more alphabetical ordering is prefered.
 
 This preference applies to ...
 
