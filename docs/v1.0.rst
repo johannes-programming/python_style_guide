@@ -12,7 +12,7 @@ A statement or command must not begin deeper than four indentation levels.
 Continuation lines, such as wrapped expressions, function arguments, or comprehensions,
 must only use one further level of indentation relative to the beginning of the command.
 
-When taking continuation lines into account, 
+When taking continuation lines into account,
 it follows that the code must never exceed five levels of indentation at any point.
 
 Deferring to helper functions, helper methods, and similar constructs is a good way to maintain indentation limits.
@@ -27,7 +27,7 @@ except where ``mypy`` does not tolerate it.
 
 Even ``self`` (in methods) and ``cls`` (in classmethods) must be explicitly annotated as ``Self`` and ``type[Self]``.
 
-All local variables within a function or method must be declared with type annotations at the beginning of the scope, without assignment. 
+All local variables within a function or method must be declared with type annotations at the beginning of the scope, without assignment.
 Assignment must occur separately at the point of first use.
 
 Prefer importing types from ``collections.abc`` over importing from ``typing``.
@@ -83,7 +83,7 @@ Documentation
 
 ``__all__`` must explicitly list every symbol intended to be part of the module's public interface.
 ``__all__`` may be empty but must always exist.
-Everything in ``__all__`` must be in the documentation. 
+Everything in ``__all__`` must be in the documentation.
 Everything in the documentation must be in ``__all__``.
 If the ``__all__`` of multiple python files reference the same feauture,
 i.e. the feauture can be imported from more than one module,
@@ -117,7 +117,7 @@ then ``run("spam", 42, bar=["hello", "world"], foo="monty", verbose=True)`` coul
 Temporary files
 ---------------
 
-Temporary files should not be created as such. 
+Temporary files should not be created as such.
 Instead, create a temporary directory and create temporary files directly or nestedly therein.
 
 Abbreviations
@@ -146,7 +146,7 @@ The explanation should contain approximately 25 words describing why the violati
 Bug Reports
 -----------
 
-Flag something as an a defect only if the context or the documentation itself provides clear evidence that it is one. 
+Flag something as an a defect only if the context or the documentation itself provides clear evidence that it is one.
 Do not infer defects from speculative alternative intentions, purposes, scopes, or features.
 Always state at least briefly which style rule or design target was violated.
 The proposed solutions should always be to change as little as possible, as much as necessary.
