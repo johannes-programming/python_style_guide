@@ -120,6 +120,14 @@ Temporary files
 Temporary files should not be created as such. 
 Instead, create a temporary directory and create temporary files directly or nestedly therein.
 
+Abbreviations
+-------------
+
+All abbreviations (e.g. variable names, import aliases, etc.) should ...
+
+- start with the same letter as the full term
+- have at maximum half the length of the full term
+
 Bending the rules
 -----------------
 
